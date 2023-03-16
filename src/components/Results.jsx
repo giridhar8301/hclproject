@@ -3,19 +3,21 @@ import { useQuizContext } from "../context/QuizContext";
 import { auth } from "../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 const Results = () => {
   let { score } = useQuizContext();
   const [user, loading, error] = useAuthState(auth);
+  let Navigate=useNavigate()
   let form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
     console.log(form.current);
     emailjs
       .sendForm(
-        "service_100kaxt",
-        "template_qzzx8mo",
+        "service_afy14c5",
+        "template_5zzjcfi",
         form.current,
-        "DQKK7nNEGya2-IXkU"
+        "1CPXTR6YwWRzubl1a"
       )
       .then(
         (result) => {
@@ -25,6 +27,8 @@ const Results = () => {
           console.log(error.text);
         }
       );
+    alert("check your mail for scores")
+    Navigate("/categories")
   };
   return (
     <div className="results">

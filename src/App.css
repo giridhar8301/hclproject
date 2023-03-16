@@ -1,14 +1,18 @@
 .category-section {
   padding: 10px;
 }
+
 body {
   /* background-color: #d5f3f9; */
+  background: #ffd166;
 }
+
 .category-section h1 {
   text-align: center;
   margin: 10px 0;
   font-weight: 500;
 }
+
 .category-container {
   display: grid;
   max-width: 1200px;
@@ -18,7 +22,8 @@ body {
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
-.category-container > a {
+
+.category-container>a {
   display: flex;
   color: black;
   text-decoration: none;
@@ -26,11 +31,13 @@ body {
   background-color: white;
   box-shadow: 0 0 10px black;
 }
-.category-container > a h2 {
+
+.category-container>a h2 {
   font-size: 1.2rem;
   font-weight: 500;
   padding: 10px;
 }
+
 .category-container img {
   width: 100%;
   aspect-ratio: 1/1;
@@ -41,6 +48,7 @@ body {
 .quiz-section {
   padding: 10px;
 }
+
 .quiz-container {
   display: grid;
   gap: 1em;
@@ -48,29 +56,35 @@ body {
   margin: 0 auto;
   padding: 10px;
 }
+
 .quiz-section h1 {
   color: #f72585;
   text-align: center;
   margin: 10px 0;
 }
+
 .question-container {
   display: grid;
   gap: 0.5rem;
 }
+
 .question-container p {
   color: #404257;
   font-weight: 600;
 }
+
 .options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1em;
 }
+
 .edits {
   display: flex;
   gap: 0.3em;
   justify-self: end;
 }
+
 .options button {
   padding: 0.4em;
   background-color: #3a86ff;
@@ -79,10 +93,12 @@ body {
   font-weight: 600;
   border-radius: 6px;
 }
+
 .edits button {
   padding: 0.3em 0.6em;
   font-weight: bold;
 }
+
 .edits button:first-child {
   --bg-color: #ec1274;
   background-color: var(--bg-color);
@@ -90,6 +106,7 @@ body {
   border: none;
   border-radius: 8px;
 }
+
 .edits button:last-child {
   --bg-color: #18a02f;
   background-color: var(--bg-color);
@@ -97,15 +114,18 @@ body {
   border: none;
   border-radius: 8px;
 }
+
 .edits button:hover {
   color: var(--bg-color);
   background-color: white;
   border: 1px solid var(--bg-color);
 }
+
 .options button.select,
 .options button:hover {
   background-color: #03045e;
 }
+
 .finish-btn {
   width: 100%;
   max-width: 200px;
@@ -126,16 +146,18 @@ body {
   align-items: center;
   padding: 1em;
 }
+
 .results h2 {
   font-size: 2rem;
   color: #f72585;
 }
+
 .results p {
   font-size: 3rem;
   color: #560bad;
 }
 
-.home-page{
+.home-page {
   display: flex;
   padding: 1em;
   align-items: center;
@@ -143,29 +165,50 @@ body {
   justify-content: space-around;
   margin: 0 auto;
 }
-.home-page h2{
+
+.home-page h2 {
   font-size: 2rem;
 }
-.home-page p{
+
+.home-page p {
   font-size: .9rem;
 }
-.home-page .content{
+
+.home-page .content {
   max-width: 400px;
   display: flex;
   gap: 2em;
   flex-direction: column;
 }
-.home-page img{
-  width:600px;
+
+.home-page img {
+  width: 600px;
   height: 600px;
   object-fit: cover;
   border-radius: 10px;
 }
+
 @media (max-width: 960px) {
   .category-container img {
     width: 270px;
   }
+
   .category-section h1 {
     font-size: 1.4rem;
   }
+}
+
+.logout-btn {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  padding: .6em;
+  font-size: 1rem;
+}
+
+.logout-btn:hover {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
 }
